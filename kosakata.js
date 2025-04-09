@@ -15,7 +15,11 @@ const wordMeaningsData = {
     "Aku tidak paham": {
         en: { "I": "Aku", "Don't": "Tidak", "Understand": "Paham" },
         jp: { "わかる": "Paham" }
-    }
+    }, 
+    "Untukmu yang abadi": {
+        en: { "To" : "Untuk", "Eternity" : "Abadi" }, 
+        jp: { "不滅" : "Abadi", "あなた" : "Kamu" }
+    }, 
 };
 
 // Menambahkan arti kata sebagai tooltip
