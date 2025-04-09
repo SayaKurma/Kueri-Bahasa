@@ -1,0 +1,115 @@
+body {
+    background-color: #fffbeb;
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.language-tab {
+    transition: all 0.3s ease;
+}
+
+.language-tab:hover {
+    transform: scale(1.05);
+}
+
+.language-tab.active {
+    background-color: #fbbf24;
+    color: white;
+}
+
+.translation-card {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.input-language {
+    transition: all 0.3s ease;
+}
+
+.input-language:hover {
+    transform: translateY(-2px);
+}
+
+.input-language.active {
+    background-color: #fbbf24;
+    color: white;
+    border-color: #f59e0b;
+}
+
+.word-meaning {
+    background-color: #fef3c7;
+    border-radius: 4px;
+    padding: 2px 4px;
+    margin: 0 2px;
+    cursor: help;
+    position: relative;
+    display: inline-block;
+}
+
+.word-meaning:hover .word-tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+.word-tooltip {
+    visibility: hidden;
+    width: 200px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -100px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 14px;
+}
+
+.word-tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #333 transparent transparent transparent;
+}
+
+.autocomplete-dropdown {
+    position: absolute;
+    width: 100%;
+    max-height: 200px;
+    overflow-y: auto;
+    background-color: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    display: none;
+}
+
+.autocomplete-item {
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.autocomplete-item:hover {
+    background-color: #f3f4f6;
+}
+
+.autocomplete-item.active {
+    background-color: #fbbf24;
+    color: white;
+}
