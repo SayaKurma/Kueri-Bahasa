@@ -146,10 +146,24 @@ function handleInput() {
         firstTranslation.classList.add('fade-in');
         setTimeout(() => firstTranslation.classList.remove('fade-in'), 500);
     } else {
-        firstText.textContent = "Terjemahan tidak ditemukan dalam database kami";
-        secondText.textContent = currentInputLang === 'id' ?
-            "データベースに翻訳が見つかりませんでした" :
-            "Translation not found in our database";
+        // Pesan error berdasarkan bahasa output pertama
+        if (firstOutputLang === 'id') {
+            firstText.textContent = "Terjemahan tidak ditemukan dalam database kami";
+        } else if (firstOutputLang === 'en') {
+            firstText.textContent = "Translation not found in our database";
+        } else if (firstOutputLang === 'jp') {
+            firstText.textContent = "データベースに翻訳が見つかりませんでした";
+        }
+
+        // Pesan error berdasarkan bahasa output kedua
+        if (secondOutputLang === 'id') {
+            secondText.textContent = "Terjemahan tidak ditemukan dalam database kami";
+        } else if (secondOutputLang === 'en') {
+            secondText.textContent = "Translation not found in our database";
+        } else if (secondOutputLang === 'jp') {
+            secondText.textContent = "データベースに翻訳が見つかりませんでした";
+        }
+
         firstWordMeanings.innerHTML = "";
         secondWordMeanings.innerHTML = "";
         outputSection.classList.remove('hidden');
