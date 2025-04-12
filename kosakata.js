@@ -20,6 +20,10 @@ const wordMeaningsData = {
         en: { "To" : "Untuk", "Eternity" : "Abadi" }, 
         jp: { "不滅" : "Abadi", "あなた" : "Kamu" }
     }, 
+    "Fenrir, monster peringkat S yang disebut-sebut mampu meluluhlantakkan kota besar seorang diri": {
+        en: { "Rank" : "Peringkat", "Capable" : "Mampu", "Destroy" : "Menghancurkan", "Major" : "Besar", "City" : "Kota", "By" : "Oleh", "Itself" : "(ia) sendiri" },
+        jp: { "一体で" : "Seorang diri", "大都市" : "Kota besar", "壊滅させる" : "Menghancurkan", "という" : "Yang katanya", "ランク" : "Peringkat", "魔物" : "Monster" }
+    }, 
 };
 
 // Menambahkan arti kata sebagai tooltip
